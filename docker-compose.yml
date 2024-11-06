@@ -3,6 +3,7 @@ version: '3.8'
 services:
   springboot-backend:
     build: .
+    container_name: regular-payments-dao
     ports:
       - "8080:8080"
     depends_on:
@@ -40,3 +41,4 @@ volumes:
 networks:
   springboot-postgresql-network:
     name: springboot-postgresql-network
+    external: true
